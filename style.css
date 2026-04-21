@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    border: none;
+    outline: none;
 }
 body{
     min-height: 100vh;
@@ -21,7 +22,7 @@ body{
     box-shadow: 0 5px 10px rgba(0,0,0,0.15);
 
 }
-.search-box{
+.searchbar{
     width: 100%;
     height: min-content;
 
@@ -29,4 +30,105 @@ body{
     justify-content: space-between;
     align-items: center;
    
+}
+.searchbar input{
+   width: 80%;
+    font-size: 20px;
+    padding: 20px;
+    align-items: center;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: #71b7e6;
+    text-transform: capitalize;
+}
+.searchbar input::placeholder{
+   color: black;
+    font-size: 20px;
+    font-weight: 500;
+}
+.searchbar button{
+    
+    width:50px;
+    height: 50px;
+    background-color: #71b7e6;
+    color: #0e0c0c;
+    font-size: 30px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+
+}
+.searchbar button:hover{
+    background-color: #9b59b6;
+    color: white
+}
+.weather-body{
+    width: 100%;
+    height: min-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-direction: column;
+}
+.weather-body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    justify-content: center;
+    margin-top: 20px;
+    text-align: center;    
+}
+.weather-image{
+    width: 150px;
+    height: 150px;
+}
+.temp{
+    font-size: 48px;
+    font-weight: 800;
+    position: relative;
+    margin-top: 10px;
+    text-align: center;
+    
+}
+
+.temp sup{
+    font-size: 15px;
+  
+    font-weight: 500;
+    position: absolute;
+    
+  
+}
+.description{
+    font-size: 23px;
+    font-weight: 500;
+    text-transform: capitalize;
+   
+}
+.weather-details{
+    width: 100%;
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+   
+}
+.humidity p{
+    font-size: 18px;
+    font-weight: 500;
+}
+.wind p{
+    font-size: 18px;
+    font-weight: 500;
+}
+.weather-body span{
+    font-size: 25px;
+}
+.weather-body i{
+    font-size: 25px;
 }
