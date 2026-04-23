@@ -7,15 +7,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="main">
+    <h1 class="main-heading">Weather App 🌤️</h1>
+<p class="sub-heading">Get real-time weather updates</p>
     <div class="container">
         <div class="header">
             <div class="searchbar">
-                <input class="cityname" type="text"  placeholder="Enter city name" class="input-box">
+                <input class="cityname" type="text" minlength="1" placeholder="Enter city name" class="input-box">
                 <button class="searchbtn"><i class="fa-solid fa-magnifying-glass"></i></button>
-              
-            
             </div>
         </div>
+        <div class="location-not-found">
+            <h1 class="error">Sorry, Location Not Found!!!</h1>
+            <img src="location-not-found.png" alt="Location Not Found">
+        </div>
+        
         <div class="weather-body">
             <img src="cloud.png" class="weather-image" alt="Weather Image">
             <div class="temp">0<sup>°C</sup></div>
@@ -37,5 +43,10 @@
     </div>
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/25764d1c61.js" crossorigin="anonymous"></script>
+<div class="footer">
+    <a href="https://www.linkedin.com/in/yug-thakral-a38252317/">© 2026 • Built with ❤️ by Yug Thakral</a>
+</div>    
+</div>
+    
 </body>
 </html>

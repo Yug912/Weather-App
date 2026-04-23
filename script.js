@@ -5,7 +5,8 @@ let temp=document.querySelector('.temp');
 let description=document.querySelector('.description');
 let humidity=document.querySelector('#humidity');
 let windspeed=document.querySelector('#wind-speed');
-
+let locationnotfound=document.querySelector('.location-not-found');
+let weatherbody=document.querySelector('.weather-body');
 
 
 async function checkweather(city)
@@ -14,11 +15,16 @@ async function checkweather(city)
 const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}`;
    const weatherdata= await fetch(url).then(response=>response.json());
     console.log(weatherdata);
-    if(weatherdata.cod === "404")
+    if(weatherdata.cod === "404"||city=="")
     {
-        alert("City not found");
+        weatherbody.style.display="none";
+        locationnotfound.style.display="flex";
+       
         return;
     }
+    
+    weatherbody.style.display="flex";
+    locationnotfound.style.display="none";
     temp.innerHTML= `${Math.round(weatherdata.main.temp-273.15)}°C`;
     description.innerHTML= `${weatherdata.weather[0].description}`;
     humidity.innerHTML= `${weatherdata.main.humidity}%`;
